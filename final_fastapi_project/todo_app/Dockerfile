@@ -1,1 +1,2 @@
-dockerfile FROM busybox
+FROM busybox
+
