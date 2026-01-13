@@ -20,13 +20,15 @@ jobs:
       - name: Сборка и отправка TODO Service
         uses: docker/build-push-action@v4
         with:
-          context: ./todo_app
+          # Добавили название папки перед todo_app
+          context: ./final_fastapi_project/todo_app
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/todo-service:latest
 
       - name: Сборка и отправка ShortURL Service
         uses: docker/build-push-action@v4
         with:
-          context: ./shorturl_app
+          # Добавили название папки перед shorturl_app
+          context: ./final_fastapi_project/shorturl_app
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/shorturl-service:latest
