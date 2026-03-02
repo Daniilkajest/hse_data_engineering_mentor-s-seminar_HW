@@ -6,3 +6,4 @@
 ## Стек
 * PySpark / Apache Zeppelin
 * Yandex Cloud S3+HDFS
+Docker
