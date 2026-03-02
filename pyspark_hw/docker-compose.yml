@@ -1,0 +1,15 @@
+version: '3'
+services:
+  zeppelin:
+    image: apache/zeppelin:0.10.1
+    container_name: zeppelin_spark
+    ports:
+      - "8080:8080"
+      - "4040:4040"  # Порт для Spark UI 
+    environment:
+      - ZEPPELIN_ADDR=0.0.0.0
+    volumes:
+      #  папка с ноутбуками
+      - ./notebook:/opt/zeppelin/notebook
+      # папа для HDFS-эмуляции
+      - ./sandbox_zeppelin:/tmp/sandbox_zeppelin
